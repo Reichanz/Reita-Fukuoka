@@ -1,0 +1,298 @@
+/*  全体のスタイル調整 */
+* {
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    z-index: 200;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.Nav .header_logo {
+  fill: #2a2ac7;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.header_logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Nav ul {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.Nav ul li {
+  padding-right: 20px;
+}
+
+/* パンクズリスト */
+.topicPath {
+  font-size: 12px;
+  color: #999;
+  margin-left: 90px;
+}
+
+#mv {
+  width: 1440px;
+}
+
+/* ストラテジー */
+.size1 {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#strategy h2 {
+  font-size: 22px;
+}
+
+#strategy h2:before {
+  content: url(https://www.nri.com/static/common/images/bg-heading-h2.png);
+  display: inline-block;
+  transform: scale(0.5);
+vertical-align: middle;
+}
+
+.pdf {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  border: 2px solid ;
+  color: #ffffff;
+  background-color: #2a2ac7;
+}
+
+.pdf p::before{
+  content: ">";
+  font-size: 10px;
+  padding-right: 7px;
+  position: relative;
+  top: 6px;
+}
+
+.sbs ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.sbs .sbs_left::before {
+  content: "<";
+  font-size: 10px;
+    padding-right: 7px;
+}
+
+.sbs .sbs_right::after {
+  content: ">";
+  font-size: 10px;
+  padding-left: 7px;
+}
+
+/* NRIの強み（表） */
+#strength .str {
+    border: 2px solid #ccc;
+    width: 800px;
+    background-color: #d7eef7;
+    margin-bottom: 65px;
+}
+
+.str strong {
+    position: relative;
+    top: 30px;
+    left: 20px;
+    bottom: 20px;
+}
+
+#strength .str ul {
+    display: grid;
+    grid-template-columns: 240px 240px 240px;
+    grid-template-rows: 70px 51px;
+    grid-gap: 20px;
+    padding-left: 20px;
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+
+.position {
+    line-height: 2;
+}
+
+#strength .str ul li {
+    border: 1px solid #ccc;
+    background-color: white;
+    list-style: none;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.share_btn {
+    height: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.share_btn img {
+  margin-left: 20px;
+}
+
+/* インフォメーション */
+#info {
+  width: 1020px;
+  margin: auto;
+  margin-top: 120px;
+}
+
+#info h3 {
+    padding: 18px 0px 13px 0px;
+    border-top: 3px solid black;
+    border-bottom: 2px solid #ccc;
+}
+
+.info_pos,
+.guide {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.needle ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.needle ul li {
+  font-size: 14px;
+  width: 250px;
+  padding-top: 20px ;
+  list-style: none;
+}
+
+.needle ul li::before {
+    content: ">";
+    font-size: 10px;
+    padding-right: 7px;
+}
+
+/* フォローリンク */
+#follow ul {
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 30px 0 30px 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+#follow ul li {
+    padding-left: 38px;
+}
+
+/* サービス */
+.s_service {
+  margin: 40px 0 70px 0;
+}
+
+#service {
+  width: 1286px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service_item {
+  width: 316.5px;
+}
+
+.service_item h5 {
+  font-weight: 700;
+}
+
+.service_item h5::before {
+  font-size: 14px;
+  content: ">";
+  font-size: 10px;
+  padding-right: 7px;
+}
+
+.service_item ul {
+  list-style: none;
+  line-height: 2.5;
+  padding-left: 0;
+}
+
+.service_item ul li::before {
+  font-size: 14px;
+  content: ">";
+  font-size: 10px;
+  padding-right: 7px;
+}
+
+.weight {
+  font-weight: 700;
+}
+
+/* フッター */
+footer {
+  width: 1440px;
+}
+
+/* ヘッダーナビ */
+.globalNav {
+  border-top: solid 1px #cccccc;
+}
+
+.globalNav ul {
+  width: 1000px;
+  margin: 70px auto 15px auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.globalNav ul li {
+  list-style: none;
+  font-size: 12px;
+  color: #999999;
+  height: 18px;
+  border-left: solid 1px #cccccc;
+  padding-left: 17px;
+}
+
+.globalNav ul li:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+footer p {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 10px;
+  padding-left: 10px;
+  line-height: 1.88;
+}
