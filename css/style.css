@@ -42,6 +42,11 @@ body {
   padding-right: 20px;
 }
 
+.Nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+.Nav ul li a:hover {color: #0c419a;}
 /* パンクズリスト */
 .topicPath {
   font-size: 12px;
@@ -53,7 +58,7 @@ body {
 .mvText {
   position: absolute;
   left: 220px;
-  bottom: 107px;
+  bottom: 143px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0);
   width: 1000px;
@@ -108,6 +113,11 @@ body {
   background-color: #2a2ac7;
 }
 
+.pdf p {color: #ffffff;}
+
+.pdf a {text-decoration: none;}
+.pdf a:hover {opacity: 0.7;}
+
 .pdf p::before {
   content: ">";
   font-size: 10px;
@@ -133,6 +143,11 @@ body {
   content: ">";
   font-size: 10px;
   padding-left: 7px;
+}
+
+.sbs a {
+  color: #0c419a;
+  text-decoration: none;
 }
 
 /* NRIの強み（表） */
@@ -172,6 +187,11 @@ body {
   text-align: center;
 }
 
+.str ul li a{
+  color: #0c419a;
+  text-decoration: none;
+}
+
 .share_btn {
   height: 24px;
   display: flex;
@@ -190,15 +210,20 @@ body {
 }
 
 #info h3 {
-  padding: 18px 0px 30px 0px;
+  padding: 26px 0px 38px 0px;
   border-top: 2px solid black;
   border-bottom: 2px solid #ccc;
 }
 
-.info_pos,
-.guide {
+.info_pos {
   display: flex;
   justify-content: flex-start;
+  border-bottom: 1px dotted #999;
+}
+
+.info_pos a {
+  color: #0c419a;
+  text-decoration: none;
 }
 
 .needle ul {
@@ -217,6 +242,16 @@ body {
 
 .needle ul li::before {
   content: ">";
+  font-size: 10px;
+  padding-right: 7px;
+}
+
+.needle p {
+  font-size: 16px;
+  margin: 50px 0 100px 0;
+}
+.needle p::before {
+  content: "<";
   font-size: 10px;
   padding-right: 7px;
 }
@@ -276,6 +311,10 @@ body {
   font-size: 10px;
   padding-right: 7px;
 }
+.service_item a {
+  color: black;
+  text-decoration: none;
+}
 
 .weight {
   font-weight: 700;
@@ -316,6 +355,11 @@ footer {
 .globalNav ul li:first-child {
   padding-left: 0;
   border-left: none;
+}
+
+.globalNav a {
+  text-decoration: none;
+  color: #999;
 }
 
 footer p {
