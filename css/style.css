@@ -75,7 +75,6 @@ body {
 
 #mv {
   position: relative;
-  width: 1440px;
 }
 
 #mv img {
@@ -322,7 +321,7 @@ body {
 
 /* フッター */
 footer {
-  width: 1440px;
+  width: 100%;
   margin-bottom: 110px;
 }
 
