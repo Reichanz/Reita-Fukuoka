@@ -18,35 +18,33 @@ body {
   margin: 0 auto;
 }
 
-.Nav .header_logo {
+.nav .headerLogo {
   fill: #2a2ac7;
   margin-top: 10px;
   margin-left: 40px;
-}
-
-.header_logo {
   display: flex;
-  justify-content: flex-start;
 }
 
-.Nav ul {
+.nav .headerLogo ul {
   list-style: none;
   font-size: 14px;
   font-weight: 700;
   display: flex;
-  justify-content: flex-end;
   margin-left: auto;
 }
 
-.Nav ul li {
+.nav .headerLogo ul li {
   padding-right: 20px;
 }
 
-.Nav ul li a {
+.nav .headerLogo ul li a {
   color: black;
   text-decoration: none;
 }
-.Nav ul li a:hover {color: #0c419a;}
+
+/* ホバー時の装飾 */
+.nav .headerLogo ul li a:hover {color: #0c419a;}
+
 /* パンクズリスト */
 .topicPath {
   font-size: 12px;
@@ -55,6 +53,16 @@ body {
 }
 
 /*メインビジュアル*/
+.mainVisual {
+  position: relative;
+}
+
+.mainVisual img {
+  vertical-align: bottom;
+  margin-bottom: 35px;
+}
+
+/* メイン画像の上に表示するテキスト */
 .mvText {
   position: absolute;
   left: 220px;
@@ -73,14 +81,17 @@ body {
   font-size: 28px;
 }
 
-#mv {
-  position: relative;
+/* シェアボタンの装飾 */
+.shareBtn {
+  height: 24px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-#mv img {
-  vertical-align: bottom;
-  margin-bottom: 35px;
+.shareBtn img {
+  margin-left: 20px;
 }
+
 
 /* ストラテジー */
 .size1 {
@@ -88,18 +99,18 @@ body {
   margin: 0 auto;
 }
 
-#strategy h2 {
+.strategy h1 {
   font-size: 22px;
 }
 
-#strategy h2:before {
+.strategy h2::before {
   content: url(https://www.nri.com/static/common/images/bg-heading-h2.png);
   display: inline-block;
   transform: scale(0.5);
   vertical-align: middle;
 }
 
-.pdf {
+.pdfData {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 60px;
@@ -112,12 +123,14 @@ body {
   background-color: #2a2ac7;
 }
 
-.pdf p {color: #ffffff;}
+.pdfData p {color: #ffffff;}
 
-.pdf a {text-decoration: none;}
-.pdf a:hover {opacity: 0.7;}
+.pdfData a {text-decoration: none;}
 
-.pdf p::before {
+/* PDFデータのホバー装飾 */
+.pdfData a:hover {opacity: 0.7;}
+
+.pdfData p::before {
   content: ">";
   font-size: 10px;
   padding-right: 7px;
@@ -125,46 +138,53 @@ body {
   top: 6px;
 }
 
-.sbs ul {
+.pdfData p::after {
+  content: url(../images/pdf_icon.svg);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.navList ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
   padding: 0;
 }
 
-.sbs .sbs_left::before {
+.navList .navLeft::before {
   content: "<";
   font-size: 10px;
   padding-right: 7px;
 }
 
-.sbs .sbs_right::after {
+.navList .navRight::after {
   content: ">";
   font-size: 10px;
   padding-left: 7px;
 }
 
-.sbs a {
+.navList a {
   color: #0c419a;
   text-decoration: none;
 }
 
 /* NRIの強み（表） */
-#strength .str {
+.strength .strengthList {
   border: 2px solid #ccc;
   width: 800px;
   background-color: #d7eef7;
   margin-bottom: 65px;
 }
 
-.str strong {
+.strength .strengthList strong {
   position: relative;
   top: 30px;
   left: 20px;
   bottom: 20px;
 }
 
-#strength .str ul {
+.strength .strengthList ul {
   display: grid;
   grid-template-columns: 240px 240px 240px;
   grid-template-rows: 70px 51px;
@@ -174,11 +194,7 @@ body {
   margin-bottom: 40px;
 }
 
-.position {
-  line-height: 2;
-}
-
-#strength .str ul li {
+.strength .strengthList ul li {
   border: 1px solid #ccc;
   background-color: white;
   list-style: none;
@@ -186,77 +202,76 @@ body {
   text-align: center;
 }
 
-.str ul li a{
+.strength .strengthList ul .position {
+  line-height: 2;
+}
+
+.strength .strengthList ul li a{
   color: #0c419a;
   text-decoration: none;
 }
 
-.share_btn {
-  height: 24px;
-  display: flex;
-  justify-content: flex-end;
-}
 
-.share_btn img {
-  margin-left: 20px;
-}
-
-/* インフォメーション */
-#info {
+/* 企業情報 */
+.compInfo {
   width: 1020px;
   margin: auto;
   margin-top: 120px;
 }
 
-#info h3 {
+.compInfo h2 {
+  font-size: 20px;
   padding: 26px 0px 38px 0px;
   border-top: 2px solid black;
   border-bottom: 2px solid #ccc;
 }
 
-.info_pos {
-  display: flex;
-  justify-content: flex-start;
+.compInfo .compNav {
   border-bottom: 1px dotted #999;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
 
-.info_pos a {
+.compInfo .compNav h3 {
+  font-size: 16px;
+}
+
+.compInfo .compNav ul {
+  display: flex;
+  padding-left: 0;
+
+}
+
+.compInfo a {
   color: #0c419a;
   text-decoration: none;
 }
 
-.needle ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 0;
-}
-
-.needle ul li {
+.compInfo ul li {
   font-size: 14px;
   width: 250px;
-  padding-top: 20px;
   list-style: none;
 }
 
-.needle ul li::before {
+.compInfo ul li::before {
   content: ">";
   font-size: 10px;
   padding-right: 7px;
 }
 
-.needle p {
+.compInfo .backBtn {
   font-size: 16px;
   margin: 50px 0 100px 0;
 }
-.needle p::before {
+.backBtn::before {
   content: "<";
   font-size: 10px;
   padding-right: 7px;
 }
 
 /* フォローリンク */
-#follow ul {
+.followBtn ul {
   border-top: 2px solid #ccc;
   border-bottom: 2px solid #ccc;
   font-size: 22px;
@@ -267,56 +282,57 @@ body {
   justify-content: center;
 }
 
-#follow ul li {
+.followBtn ul li {
+  list-style: none;
   padding-left: 38px;
 }
 
-/* サービス */
-.s_service {
-  margin: 40px 0 70px 0;
-}
-
-#service {
+/* サービスリスト */
+.serviceList {
   width: 1286px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
 
-.service_item {
+.serviceItem {
+  padding-left: 0;
   width: 316.5px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
-.service_item h5 {
+.serviceItem ul{
+  list-style: none;
+}
+
+.serviceItem h3 {
   font-weight: 700;
 }
 
-.service_item h5::before {
+.serviceItem h3::before {
   font-size: 14px;
   content: ">";
   font-size: 10px;
   padding-right: 7px;
 }
 
-.service_item ul {
+.serviceItem ul {
   list-style: none;
   line-height: 2.5;
   padding-left: 0;
 }
 
-.service_item ul li::before {
+.serviceItem ul li::before {
   font-size: 14px;
   content: ">";
   font-size: 10px;
   padding-right: 7px;
 }
-.service_item a {
+.serviceItem a {
   color: black;
   text-decoration: none;
-}
-
-.weight {
-  font-weight: 700;
 }
 
 /* フッター */
@@ -361,10 +377,9 @@ footer {
   color: #999;
 }
 
-footer p {
+.copyright {
   max-width: 1000px;
   margin: auto;
-  font-size: 10px;
+  font-size: 12px;
   padding-left: 10px;
-  line-height: 1.88;
 }
