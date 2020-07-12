@@ -23,7 +23,7 @@ body {
 }
 
 .headerLogo .svgLogo {
-  fill: #2a2ac7;
+  fill: #005bac;
   margin-top: 10px;
   margin-left: 40px;
 }
@@ -134,11 +134,15 @@ body {
   font-size: 22px;
 }
 
-.strategy h2::before {
+.strategy h1::before {
   content: url(https://www.nri.com/static/common/images/bg-heading-h2.png);
   display: inline-block;
   transform: scale(0.5);
   vertical-align: middle;
+}
+
+.strategy p {
+  line-height: 1.88;
 }
 
 .pdfData {
@@ -151,7 +155,7 @@ body {
   width: 300px;
   border: 2px solid;
   color: #ffffff;
-  background-color: #2a2ac7;
+  background-color: #005bac;
 }
 
 .pdfData p {color: #ffffff;}
@@ -159,7 +163,10 @@ body {
 .pdfData a {text-decoration: none;}
 
 /* PDFデータのホバー装飾 */
-.pdfData a:hover {opacity: 0.7;}
+.pdfData:hover {
+  opacity: 0.8;
+  transition: all  0.3s ease;
+}
 
 .pdfData p::before {
   content: ">";
@@ -200,6 +207,11 @@ body {
   bottom: 3px;
 }
 
+/* ホバー時の装飾 */
+.navList ul a:hover {
+  border-bottom: 0.5px solid #005bac;
+}
+
 .navList a {
   color: #0c419a;
   text-decoration: none;
@@ -235,6 +247,12 @@ body {
   list-style: none;
   padding: 15px 20px;
   text-align: center;
+}
+
+.strength .strengthList ul li:hover {
+  opacity: 0.9;
+  transition: all  0.3s ease;
+  background-color: #F5F5F5;
 }
 
 .strength .strengthList ul li::before {
@@ -304,6 +322,10 @@ body {
   text-decoration: none;
 }
 
+.compInfo a:hover {
+  text-decoration: underline
+}
+
 .compInfo ul li {
   font-size: 14px;
   width: 250px;
@@ -338,6 +360,7 @@ body {
   font-size: 22px;
   font-weight: 700;
   padding: 30px 0 30px 0;
+  margin-bottom: 35px;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -366,35 +389,37 @@ body {
 
 .serviceItem h4 {
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 .serviceItem ul{
   list-style: none;
+  font-size: 14px;
 }
 
-.serviceItem h3::before {
-  font-size: 14px;
+.serviceItem h4::before {
   content: ">";
   font-size: 10px;
-  padding-right: 10px;
+  padding-right: 5px;
+  position: relative;
+  bottom: 3px;
 }
 
 .serviceItem ul {
   list-style: none;
-  line-height: 2.5;
   padding-left: 0;
 }
 
 .serviceItem ul li {
   display: flex;
+  padding-top: 22px;
 }
 
 .serviceItem ul li::before {
-  font-size: 14px;
   content: ">";
   font-size: 10px;
   padding-right: 10px;
-  padding-top: 7px;
+  padding-top: 5px;
 }
 
 .serviceItem a {
@@ -402,6 +427,19 @@ body {
   text-decoration: none;
 }
 
+.bottomItem {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+
+/* ホバーの装飾 */
+.serviceList .serviceItem h4 a:hover {
+  border-bottom: 1px solid #444;
+}
+.serviceList .serviceItem ul li a:hover {
+  text-decoration: underline;
+}
 /* フッター */
 footer {
   width: 100%;
@@ -449,4 +487,9 @@ footer {
   margin: auto;
   font-size: 12px;
   padding-left: 10px;
+}
+
+/* ホバーの装飾 */
+.globalNav li a:hover {
+  border-bottom: 0.5px solid #999999;
 }
