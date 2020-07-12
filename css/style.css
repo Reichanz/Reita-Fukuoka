@@ -37,12 +37,19 @@ body {
 }
 
 .headerLogo ul li {
-  padding-right: 20px;
+  padding-right: 16px;
+  letter-spacing: -1px;
 }
 
 .headerLogo ul li a {
   color: black;
   text-decoration: none;
+}
+
+/* 上部アイコンのホバー */
+.topIcon:hover {
+  opacity: 0.5;
+  transition: all  0.3s ease;
 }
 
 /* ハンバーガーアイコンの実装 */
@@ -90,6 +97,8 @@ body {
 
 .mainVisual img {
   vertical-align: bottom;
+  width: 100vw;
+  height: 250px;
   margin-bottom: 35px;
 }
 
@@ -115,12 +124,15 @@ body {
 /* シェアボタンの装飾 */
 .shareBtn {
   height: 24px;
+  font-family: Arial;
   display: flex;
   justify-content: flex-end;
 }
 
 .shareBtn img {
   margin-left: 20px;
+  width: 28px;
+  height: 28px;
 }
 
 
@@ -173,7 +185,7 @@ body {
   font-size: 10px;
   padding-right: 7px;
   position: relative;
-  top: 6px;
+  top: 12px;
   left: -10px;
 }
 
@@ -340,6 +352,7 @@ body {
   padding-right: 10px;
 }
 
+/* 前のページに戻る */
 .compInfo .backBtn {
   font-size: 16px;
   margin: 50px 0 100px 0;
@@ -364,6 +377,12 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
+}
+
+/* フォローボタンのアイコン */
+.followBtn img {
+  width: 28px;
+  height: 28px;
 }
 
 .followBtn ul li {
@@ -419,7 +438,7 @@ body {
   content: ">";
   font-size: 10px;
   padding-right: 10px;
-  padding-top: 5px;
+  padding-top: 1px;
 }
 
 .serviceItem a {
@@ -447,10 +466,6 @@ footer {
 }
 
 /* フッターナビ */
-footer {
-  width: 100%;
-}
-
 .globalNav {
   border-top: solid 1px #cccccc;
 }
