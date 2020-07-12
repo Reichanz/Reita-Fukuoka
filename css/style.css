@@ -136,6 +136,7 @@ body {
   padding-right: 7px;
   position: relative;
   top: 6px;
+  left: -10px;
 }
 
 .pdfData p::after {
@@ -149,19 +150,23 @@ body {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
 
 .navList .navLeft::before {
   content: "<";
   font-size: 10px;
   padding-right: 7px;
+  position: relative;
+  bottom: 3px;
 }
 
 .navList .navRight::after {
   content: ">";
   font-size: 10px;
   padding-left: 7px;
+  position: relative;
+  bottom: 3px;
 }
 
 .navList a {
@@ -171,7 +176,6 @@ body {
 
 /* NRIの強み（表） */
 .strength .strengthList {
-  border: 2px solid #ccc;
   width: 800px;
   background-color: #d7eef7;
   margin-bottom: 65px;
@@ -202,8 +206,25 @@ body {
   text-align: center;
 }
 
+.strength .strengthList ul li::before {
+  content: ">";
+  font-size: 10px;
+  position: absolute;
+  display: flex;
+  margin-left: -14px;
+  padding-top: 2px;
+}
+
+.strength .strengthList ul .firstItem::before {
+  padding-top: 10px;
+}
+
 .strength .strengthList ul .position {
   line-height: 2;
+}
+
+.strength .strengthList ul .position::before {
+  padding-top: 6px;
 }
 
 .strength .strengthList ul li a{
@@ -222,8 +243,9 @@ body {
 .compInfo h2 {
   font-size: 20px;
   padding: 26px 0px 38px 0px;
+  margin-bottom: 0;
   border-top: 2px solid black;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px dotted #ccc;
 }
 
 .compInfo .compNav {
@@ -231,16 +253,19 @@ body {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
+  padding: 30px 0 30px 0;
 }
 
 .compInfo .compNav h3 {
   font-size: 16px;
+  margin: 0;
+  line-height: 24.5px;
 }
 
 .compInfo .compNav ul {
   display: flex;
   padding-left: 0;
-
+  margin: 0;
 }
 
 .compInfo a {
@@ -251,23 +276,28 @@ body {
 .compInfo ul li {
   font-size: 14px;
   width: 250px;
+  padding-top: 23px;
   list-style: none;
+  display: flex;
 }
 
 .compInfo ul li::before {
   content: ">";
   font-size: 10px;
-  padding-right: 7px;
+  padding-right: 10px;
 }
 
 .compInfo .backBtn {
   font-size: 16px;
   margin: 50px 0 100px 0;
+  display: flex;
 }
+
 .backBtn::before {
   content: "<";
   font-size: 10px;
-  padding-right: 7px;
+  padding-right: 10px;
+  padding-top: 3px;
 }
 
 /* フォローリンク */
@@ -303,19 +333,19 @@ body {
   flex-direction: column;
 }
 
-.serviceItem ul{
-  list-style: none;
+.serviceItem h4 {
+  font-weight: 700;
 }
 
-.serviceItem h3 {
-  font-weight: 700;
+.serviceItem ul{
+  list-style: none;
 }
 
 .serviceItem h3::before {
   font-size: 14px;
   content: ">";
   font-size: 10px;
-  padding-right: 7px;
+  padding-right: 10px;
 }
 
 .serviceItem ul {
@@ -324,12 +354,18 @@ body {
   padding-left: 0;
 }
 
+.serviceItem ul li {
+  display: flex;
+}
+
 .serviceItem ul li::before {
   font-size: 14px;
   content: ">";
   font-size: 10px;
-  padding-right: 7px;
+  padding-right: 10px;
+  padding-top: 7px;
 }
+
 .serviceItem a {
   color: black;
   text-decoration: none;
