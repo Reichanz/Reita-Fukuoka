@@ -84,15 +84,36 @@ body {
 .headerLogo ul li a:hover {color: #0c419a;}
 
 /* パンクズリスト */
-.topicPath {
-  font-size: 12px;
+.topicPath ul li{
+  display: inline-block;
   color: #999;
-  margin-left: 90px;
+  font-size: 12px;
+}
+
+.topicPath ul li a {
+  text-decoration: none;
+  color: #999;
+}
+
+.topicPath ul li:before {
+  content: ">";
+  font-size: 6px;
+  padding: 0 4px 3px 0;
+  vertical-align: middle;
+}
+
+.topicPath ul :first-child:before {
+  content: none;
 }
 
 /*メインビジュアル*/
 .mainVisual {
   position: relative;
+}
+
+.mainVisual .mvText::before {
+  content: "NRIの強み";
+  font-size: 20px;
 }
 
 .mainVisual img {
@@ -165,14 +186,18 @@ body {
   justify-content: center;
   text-align: center;
   width: 300px;
+  height: 70px;
   border: 2px solid;
   color: #ffffff;
   background-color: #005bac;
 }
 
-.pdfData p {color: #ffffff;}
+.pdfData .pdfText {color: #ffffff;}
 
-.pdfData a {text-decoration: none;}
+.pdfData a {
+  text-decoration: none;
+  padding-top: 13px;
+}
 
 /* PDFデータのホバー装飾 */
 .pdfData:hover {
@@ -180,7 +205,7 @@ body {
   transition: all  0.3s ease;
 }
 
-.pdfData p::before {
+.pdfData .pdfText::before {
   content: ">";
   font-size: 10px;
   padding-right: 7px;
@@ -189,7 +214,7 @@ body {
   left: -10px;
 }
 
-.pdfData p::after {
+.pdfData .pdfText::after {
   content: url(../images/pdf_icon.svg);
   display: inline-block;
   width: 18px;
