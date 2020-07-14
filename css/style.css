@@ -12,6 +12,10 @@ header {
   z-index: 200;
 }
 
+main {
+  margin-top: 80px;
+}
+
 body {
   font-family: sans-serif;
   font-size: 16px;
@@ -20,6 +24,7 @@ body {
 
 .headerLogo {
   display: flex;
+  margin-top: 5px;
 }
 
 .headerLogo .svgLogo {
@@ -46,19 +51,30 @@ body {
   text-decoration: none;
 }
 
+.topIcons {
+  display: flex;
+}
+
+.topIcon {
+  margin-right: 28px;
+}
+
 /* 上部アイコンのホバー */
-.topIcon:hover {
+.topIcon:hover,
+.humIcon:hover {
   opacity: 0.5;
   transition: all  0.3s ease;
 }
 
 /* ハンバーガーアイコンの実装 */
+
 .hum {
   position: relative;
   height: 20px;
   width: 20px;
   display: inline-block;
   box-sizing: border-box;
+  margin-right: 5px;
 }
 .hum div {
   position: absolute;
@@ -84,6 +100,10 @@ body {
 .headerLogo ul li a:hover {color: #0c419a;}
 
 /* パンクズリスト */
+.topicPath {
+  padding-left: 50px;
+}
+
 .topicPath ul li{
   display: inline-block;
   color: #999;
@@ -121,6 +141,7 @@ body {
   width: 100vw;
   height: 250px;
   margin-bottom: 35px;
+  object-fit: cover;
 }
 
 /* メイン画像の上に表示するテキスト */
@@ -259,6 +280,7 @@ body {
   width: 800px;
   background-color: #d7eef7;
   margin-bottom: 65px;
+  padding-bottom: 1px;
 }
 
 .strength .strengthList strong {
