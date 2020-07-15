@@ -51,23 +51,18 @@ body {
   text-decoration: none;
 }
 
-.topIcons {
-  display: flex;
-}
-
 .topIcon {
-  margin-right: 28px;
+  margin-right: 23px;
 }
 
 /* 上部アイコンのホバー */
 .topIcon:hover,
 .humIcon:hover {
   opacity: 0.5;
-  transition: all  0.3s ease;
+  transition: all 0.3s ease;
 }
 
 /* ハンバーガーアイコンの実装 */
-
 .hum {
   position: relative;
   height: 20px;
@@ -97,14 +92,16 @@ body {
 }
 
 /* ホバー時の装飾 */
-.headerLogo ul li a:hover {color: #0c419a;}
+.headerLogo ul li a:hover {
+  color: #0c419a;
+}
 
 /* パンクズリスト */
 .topicPath {
   padding-left: 50px;
 }
 
-.topicPath ul li{
+.topicPath ul li {
   display: inline-block;
   color: #999;
   font-size: 12px;
@@ -172,7 +169,7 @@ body {
 }
 
 .shareText {
-margin-top: 3px;
+  margin-top: 3px;
 }
 
 .shareBtn img {
@@ -180,7 +177,6 @@ margin-top: 3px;
   width: 28px;
   height: 28px;
 }
-
 
 /* ストラテジー */
 .size1 {
@@ -218,7 +214,9 @@ margin-top: 3px;
   background-color: #005bac;
 }
 
-.pdfData .pdfText {color: #ffffff;}
+.pdfData .pdfText {
+  color: #ffffff;
+}
 
 .pdfData a {
   text-decoration: none;
@@ -228,7 +226,7 @@ margin-top: 3px;
 /* PDFデータのホバー装飾 */
 .pdfData:hover {
   opacity: 0.8;
-  transition: all  0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .pdfData .pdfText::before {
@@ -315,8 +313,8 @@ margin-top: 3px;
 
 .strength .strengthList ul li:hover {
   opacity: 0.9;
-  transition: all  0.3s ease;
-  background-color: #F5F5F5;
+  transition: all 0.3s ease;
+  background-color: #f5f5f5;
 }
 
 .strength .strengthList ul li::before {
@@ -340,11 +338,10 @@ margin-top: 3px;
   padding-top: 6px;
 }
 
-.strength .strengthList ul li a{
+.strength .strengthList ul li a {
   color: #0c419a;
   text-decoration: none;
 }
-
 
 /* 企業情報 */
 .compInfo {
@@ -387,7 +384,7 @@ margin-top: 3px;
 }
 
 .compInfo a:hover {
-  text-decoration: underline
+  text-decoration: underline;
 }
 
 .compInfo ul li {
@@ -463,7 +460,7 @@ margin-top: 3px;
   margin-bottom: 0;
 }
 
-.serviceItem ul{
+.serviceItem ul {
   list-style: none;
   font-size: 14px;
 }
