@@ -1,0 +1,558 @@
+/*  全体のスタイル調整 */
+* {
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  z-index: 200;
+}
+
+main {
+  margin-top: 60px;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.headerLogo {
+  display: flex;
+  margin-top: 5px;
+}
+
+.headerLogo .svgLogo {
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.headerLogo ul {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  margin-left: auto;
+}
+
+.headerLogo ul li {
+  padding-right: 16px;
+  letter-spacing: -1px;
+}
+
+.headerLogo ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.topIcon {
+  margin-right: 23px;
+}
+
+/* 上部アイコンのホバー */
+.topIcon:hover,
+.humIcon:hover {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* ハンバーガーアイコンの実装 */
+.hum {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+.hum div {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 20px;
+  background-color: #444;
+  border-radius: 2px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.hum div:nth-of-type(1) {
+  top: 2px;
+}
+.hum div:nth-of-type(2) {
+  top: 10px;
+}
+.hum div:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* ホバー時の装飾 */
+.headerLogo ul li a:hover {
+  color: #0c419a;
+}
+
+/* パンクズリスト */
+.topicPath {
+  padding-left: 50px;
+}
+
+.topicPath ul li {
+  display: inline-block;
+  color: #999;
+  font-size: 12px;
+}
+
+.topicPath ul li a {
+  text-decoration: none;
+  color: #999;
+}
+
+.topicPath ul li:before {
+  content: ">";
+  font-size: 6px;
+  padding: 0 4px 3px 0;
+  vertical-align: middle;
+}
+
+.topicPath ul :first-child:before {
+  content: none;
+}
+
+/*メインビジュアル*/
+.mainVisual {
+  position: relative;
+}
+
+.mainVisual .mvText::before {
+  content: "NRIの強み";
+  font-size: 20px;
+}
+
+.mainVisual img {
+  vertical-align: bottom;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 35px;
+  object-fit: cover;
+}
+
+/* メイン画像の上に表示するテキスト */
+.mvText {
+  position: absolute;
+  left: 220px;
+  bottom: 143px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  width: 1000px;
+  margin: auto;
+}
+
+.mvText p {
+  font-size: 20px;
+}
+
+.mvText h1 {
+  font-size: 28px;
+}
+
+/* シェアボタンの装飾 */
+.shareBtn {
+  height: 24px;
+  font-family: Arial;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shareText {
+  margin-top: 3px;
+}
+
+.shareBtn img {
+  margin-left: 20px;
+  width: 28px;
+  height: 28px;
+}
+
+/* ストラテジー */
+.size1 {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.strategy h1 {
+  font-size: 22px;
+}
+
+.strategy h1::before {
+  content: url(https://www.nri.com/static/common/images/bg-heading-h2.png);
+  display: inline-block;
+  transform: scale(0.5);
+  vertical-align: middle;
+  margin-left: -10px;
+}
+
+.strategy p {
+  line-height: 1.88;
+}
+
+.pdfData {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  height: 70px;
+  border: 2px solid;
+  color: #ffffff;
+  background-color: #005bac;
+}
+
+.pdfData .pdfText {
+  color: #ffffff;
+}
+
+.pdfData a {
+  text-decoration: none;
+  padding-top: 13px;
+}
+
+/* PDFデータのホバー装飾 */
+.pdfData:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.pdfData .pdfText::before {
+  content: ">";
+  font-size: 10px;
+  padding-right: 7px;
+  position: relative;
+  top: 12px;
+  left: -10px;
+}
+
+.pdfData .pdfText::after {
+  content: url(../images/pdf_icon.svg);
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.navList ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navList .navLeft::before {
+  content: "<";
+  font-size: 10px;
+  padding-right: 7px;
+  position: relative;
+  bottom: 3px;
+}
+
+.navList .navRight::after {
+  content: ">";
+  font-size: 10px;
+  padding-left: 7px;
+  position: relative;
+  bottom: 3px;
+}
+
+/* ホバー時の装飾 */
+.navList ul a:hover {
+  border-bottom: 0.5px solid #005bac;
+}
+
+.navList a {
+  color: #0c419a;
+  text-decoration: none;
+}
+
+/* NRIの強み（表） */
+.strength .strengthList {
+  width: 800px;
+  background-color: #d7eef7;
+  margin-bottom: 65px;
+  padding-bottom: 1px;
+}
+
+.strength .strengthList strong {
+  position: relative;
+  top: 30px;
+  left: 20px;
+  bottom: 20px;
+}
+
+.strength .strengthList ul {
+  display: grid;
+  grid-template-columns: 240px 240px 240px;
+  grid-template-rows: 70px 51px;
+  grid-gap: 20px;
+  padding-left: 20px;
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.strength .strengthList ul li {
+  border: 1px solid #ccc;
+  background-color: white;
+  list-style: none;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.strength .strengthList ul li:hover {
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  background-color: #f5f5f5;
+}
+
+.strength .strengthList ul li::before {
+  content: ">";
+  font-size: 10px;
+  position: absolute;
+  display: flex;
+  margin-left: -14px;
+  padding-top: 2px;
+}
+
+.strength .strengthList ul .firstItem::before {
+  padding-top: 10px;
+}
+
+.strength .strengthList ul .position {
+  line-height: 2;
+}
+
+.strength .strengthList ul .position::before {
+  padding-top: 6px;
+}
+
+.strength .strengthList ul li a {
+  color: #0c419a;
+  text-decoration: none;
+}
+
+/* 企業情報 */
+.compInfo {
+  width: 1020px;
+  margin: auto;
+  margin-top: 120px;
+}
+
+.compInfo h2 {
+  font-size: 20px;
+  padding: 26px 0px 38px 0px;
+  margin-bottom: 0;
+  border-top: 2px solid black;
+  border-bottom: 1px dotted #ccc;
+}
+
+.compInfo .compNav {
+  border-bottom: 1px dotted #999;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 30px 0 30px 0;
+}
+
+.compInfo .compNav h3 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 24.5px;
+}
+
+.compInfo .compNav ul {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+}
+
+.compInfo a {
+  color: #0c419a;
+  text-decoration: none;
+}
+
+.compInfo a:hover {
+  text-decoration: underline;
+}
+
+.compInfo ul li {
+  font-size: 14px;
+  width: 250px;
+  padding-top: 23px;
+  list-style: none;
+  display: flex;
+}
+
+.compInfo ul li::before {
+  content: ">";
+  font-size: 10px;
+  padding-right: 10px;
+}
+
+/* 前のページに戻る */
+.compInfo .backBtn {
+  font-size: 16px;
+  margin: 50px 0 100px 0;
+  display: flex;
+}
+
+.backBtn::before {
+  content: "<";
+  font-size: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+}
+
+/* フォローリンク */
+.followBtn ul {
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 30px 0 30px 0;
+  margin-bottom: 35px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* フォローボタンのアイコン */
+.followBtn img {
+  width: 28px;
+  height: 28px;
+}
+
+.followBtn ul li {
+  list-style: none;
+  padding-left: 38px;
+}
+
+/* サービスリスト */
+.serviceList {
+  width: 1286px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.serviceItem {
+  padding-left: 0;
+  width: 316.5px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.serviceItem h4 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.serviceItem ul {
+  list-style: none;
+  font-size: 14px;
+}
+
+.serviceItem h4::before {
+  content: ">";
+  font-size: 10px;
+  padding-right: 5px;
+  position: relative;
+  bottom: 3px;
+}
+
+.serviceItem ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.serviceItem ul li {
+  display: flex;
+  padding-top: 22px;
+}
+
+.serviceItem ul li::before {
+  content: ">";
+  font-size: 10px;
+  padding-right: 10px;
+  padding-top: 1px;
+}
+
+.serviceItem a {
+  color: black;
+  text-decoration: none;
+}
+
+.bottomItem {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+
+/* ホバーの装飾 */
+.serviceList .serviceItem h4 a:hover {
+  border-bottom: 1px solid #444;
+}
+.serviceList .serviceItem ul li a:hover {
+  text-decoration: underline;
+}
+/* フッター */
+footer {
+  width: 100%;
+  margin-bottom: 110px;
+}
+
+/* フッターナビ */
+.globalNav {
+  border-top: solid 1px #cccccc;
+}
+
+.globalNav ul {
+  width: 1000px;
+  margin: 70px auto 15px auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.globalNav ul li {
+  list-style: none;
+  font-size: 12px;
+  color: #999999;
+  height: 18px;
+  border-left: solid 1px #cccccc;
+  padding-left: 17px;
+}
+
+.globalNav ul li:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.globalNav a {
+  text-decoration: none;
+  color: #999;
+}
+
+.copyright {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+/* ホバーの装飾 */
+.globalNav li a:hover {
+  border-bottom: 0.5px solid #999999;
+}
